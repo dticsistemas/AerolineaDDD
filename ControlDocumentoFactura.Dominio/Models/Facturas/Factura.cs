@@ -40,6 +40,7 @@ namespace ControlDocumentoFactura.Dominio.Models.Facturas
         {
             Id = Guid.NewGuid();
             Monto = new MontoValue(0m);
+            Importe= new MontoValue(0m);
             NroFactura = nroFactura;
 
         }

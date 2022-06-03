@@ -14,11 +14,11 @@ namespace ControlDocumentoFactura.Dominio.Models.Reservas
     {
 
         public CodigoReservaValue CodReserva; 
-        public String EstadoReserva;//public EstadoReservaValue EstadoReserva;
+        public String EstadoReserva;
         public MontoValue Monto;
         public MontoValue Deuda;
         public DateTime Fecha;
-        public String TipoReserva;//public TipoReservaValue TipoReserva;
+        public String TipoReserva;
         public Guid ClienteId;
         public Guid VueloId;
 
