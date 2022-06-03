@@ -52,7 +52,7 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Queries.Pagos.BuscarFactu
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al obtener Factura con id:... { FacturaId }", request.Id);
+                _logger.LogError(ex, "Error al obtener Factura Id");
             }
 
             return result;
