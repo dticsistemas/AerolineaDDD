@@ -58,6 +58,10 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Config.ReadCon
                .HasColumnName("nroAutorizacion")
                .HasMaxLength(25);
 
+            builder.Property(x => x.Estado)
+               .HasColumnName("estado")
+               .HasMaxLength(10);
+
 
             /*
         

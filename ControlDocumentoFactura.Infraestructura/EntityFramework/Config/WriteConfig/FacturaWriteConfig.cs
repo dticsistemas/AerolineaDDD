@@ -97,6 +97,9 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Config.WriteCo
                 .HasConversion(numeroAutorizacionConverter)
                 .HasMaxLength(25);
             //-------------------------------
+            builder.Property(x => x.Estado)
+                .HasColumnName("estado");
+            //-------------------------------
             builder.Property(x => x.ClienteId)
                 .HasColumnName("clienteId");
             //-------------------------------

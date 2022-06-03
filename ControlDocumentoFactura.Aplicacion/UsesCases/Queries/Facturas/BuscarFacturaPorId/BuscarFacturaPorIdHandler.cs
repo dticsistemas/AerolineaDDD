@@ -43,7 +43,8 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Queries.Pagos.BuscarFactu
                     RazonSocialBeneficiario=objFactura.RazonSocialBeneficiario,
                     ReservaId = objFactura.ReservaId,
                     ClienteId=objFactura.ClienteId,
-                    VueloId=objFactura.VueloId
+                    VueloId=objFactura.VueloId,
+                    Estado=objFactura.Estado
 
 
                 };

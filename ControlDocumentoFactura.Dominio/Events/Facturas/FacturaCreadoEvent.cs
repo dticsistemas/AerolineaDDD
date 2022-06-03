@@ -18,8 +18,6 @@ namespace ControlDocumentoFactura.Dominio.Events.Facturas
 
         public Guid ReservaId { get; }
 
-        public RazonSocialValue razonSocialBeneficiario { get; }
-
         public FacturaCreadoEvent(decimal monto, Guid facturaId, Guid clienteId, Guid reservaId
             ) : base(DateTime.Now)
         {

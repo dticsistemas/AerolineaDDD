@@ -26,7 +26,8 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             var nitBeneficiarioTest = "654321";
             var razonSocialProveedorTest = "AEROPRO";
             var razonSocialBeneficiarioTest = "Juan Perez";
-            var NroAutorizacionTest = "1";
+            var nroAutorizacionTest = "1";
+            var estadoTest = "P";
 
             var objFactura = new FacturaDto();
 
@@ -44,6 +45,7 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             Assert.Null(objFactura.RazonSocialProveedor);
             Assert.Null(objFactura.NitBeneficiario);
             Assert.Null(objFactura.NitProveedor);
+            Assert.Null(objFactura.Estado);
 
 
 
@@ -57,16 +59,27 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             objFactura.NitBeneficiario = nitBeneficiarioTest;
             objFactura.RazonSocialProveedor = razonSocialProveedorTest;
             objFactura.RazonSocialBeneficiario = razonSocialBeneficiarioTest;
-            objFactura.NroAutorizacion = NroAutorizacionTest;
+            objFactura.NroAutorizacion = nroAutorizacionTest;
             objFactura.ReservaId = idReservaTest;
             objFactura.ClienteId = idClienteTest;
             objFactura.VueloId = idVueloTest;
+            objFactura.Estado = estadoTest;
 
             Assert.Equal(idFacturaTest,objFactura.Id);
             Assert.Equal(idReservaTest,objFactura.ReservaId);
             Assert.Equal(montoTest,objFactura.Monto);
+            Assert.Equal(importeTest, objFactura.Importe);
             Assert.Equal(fechaTest,objFactura.Fecha);
             Assert.Equal(nroFacturaTest,objFactura.NroFactura);
+            Assert.Equal(lugarTest, objFactura.Lugar);
+            Assert.Equal(nitProveedorTest, objFactura.NitProveedor);
+            Assert.Equal(nitBeneficiarioTest, objFactura.NitBeneficiario);
+            Assert.Equal(razonSocialProveedorTest, objFactura.RazonSocialProveedor);
+            Assert.Equal(razonSocialBeneficiarioTest, objFactura.RazonSocialBeneficiario);
+            Assert.Equal(nroAutorizacionTest, objFactura.NroAutorizacion);
+            Assert.Equal(idClienteTest, objFactura.ClienteId);
+            Assert.Equal(idVueloTest, objFactura.VueloId);
+            Assert.Equal(estadoTest, objFactura.Estado);
 
         }
     }

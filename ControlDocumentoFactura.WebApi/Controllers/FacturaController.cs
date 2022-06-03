@@ -2,7 +2,6 @@
 using ControlDocumentoFactura.Aplicacion.Dtos.Reservas;
 using ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.CrearFactura;
 using ControlDocumentoFactura.Aplicacion.UsesCases.Queries.Pagos.BuscarFacturaPorId;
-using ControlDocumentoFactura.Aplicacion.UsesCases.Queries.Pagos.BuscarFacturasReserva;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -43,18 +42,7 @@ namespace ControlDocumentoFactura.WebApi.Controllers
             return Ok(result);
         }
 
-        [Route("BuscarFacturaReserva")]
-        [HttpPost]
-        public async Task<IActionResult> Search([FromBody] BuscarFacturasReservaQuery query)
-        {
-            var facturas = await _mediator.Send(query);
-
-            if (facturas == null)
-                return BadRequest();
-
-            return Ok(facturas);
-        }
-
+      
 
     }
 }

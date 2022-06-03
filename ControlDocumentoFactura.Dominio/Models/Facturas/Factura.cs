@@ -1,4 +1,5 @@
-﻿using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
+﻿using ControlDocumentoFactura.Dominio.Events.Facturas;
+using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
 using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
 using ControlDocumentoFactura.Dominio.Models.ValueObjects;
 using ShareKernel.Cores;
@@ -59,10 +60,19 @@ namespace ControlDocumentoFactura.Dominio.Models.Facturas
             NroAutorizacion = "1";
             Estado = "P";
 
-
         }
 
-        public string getNroFactura()
+        public void EntregaFactura()
+        {
+            var evento = new FacturaCreadoEvent(Monto,Id,ClienteId,ReservaId);
+            AddDomainEvent(evento);
+        }
+
+        public void UpddateEstadoFacturaEntregado()
+        {
+            Estado = "E"; ;
+        }
+        public string GetNroFactura()
         {
             return NroFactura;
         }

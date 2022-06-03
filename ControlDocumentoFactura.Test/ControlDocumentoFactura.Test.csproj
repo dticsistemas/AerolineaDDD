@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="PostmanTestIntegracion\**" />
+    <EmbeddedResource Remove="PostmanTestIntegracion\**" />
+    <None Remove="PostmanTestIntegracion\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="Moq" Version="4.18.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -24,10 +30,6 @@
     <ProjectReference Include="..\ControlDocumentoFactura.Aplicacion\ControlDocumentoFactura.Aplicacion.csproj" />
     <ProjectReference Include="..\ControlDocumentoFactura.Infraestructura\ControlDocumentoFactura.Infraestructura.csproj" />
     <ProjectReference Include="..\ControlDocumentoFactura.WebApi\ControlDocumentoFactura.WebApi.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="PostmanTestIntegracion\" />
   </ItemGroup>
 
 </Project>

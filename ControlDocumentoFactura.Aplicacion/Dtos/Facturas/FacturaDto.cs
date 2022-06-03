@@ -18,7 +18,8 @@ namespace ControlDocumentoFactura.Aplicacion.Dtos.Pagos
         public String RazonSocialProveedor { get; set; }
         public String NitBeneficiario { get; set; }
         public String RazonSocialBeneficiario { get; set; }
-        public String NroAutorizacion { get; set; }       
+        public String NroAutorizacion { get; set; }
+        public String Estado { get; set; }
         public Guid ReservaId { get; set; }
         public Guid ClienteId { get; set; }
         public Guid VueloId { get; set; }

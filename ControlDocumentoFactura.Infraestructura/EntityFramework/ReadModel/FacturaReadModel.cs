@@ -19,6 +19,7 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.ReadModel
         public String NitBeneficiario { get; set; }
         public String RazonSocialBeneficiario { get; set; }
         public String NroAutorizacion { get; set; }
+        public String Estado { get; set; }
         public ReservaReadModel Reserva { get; set; }
         public ClienteReadModel Cliente { get; set; }
         public VueloReadModel Vuelo { get; set; }

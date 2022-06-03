@@ -28,8 +28,8 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.Entrega
 
         public async Task Handle(FacturaCreadoEvent notification, CancellationToken cancellationToken)
         {
-             Factura objFactura = await _facturaRepository.FindByIdAsync(notification.FacturaId);             
-             Console.WriteLine("EMAIL RESERVA FACTURADA" + objFactura.getNroFactura());
+            Factura objProducto = await _facturaRepository.FindByIdAsync(notification.FacturaId);
+            Console.WriteLine("Enviando Email Factura....."+notification.FacturaId);
         }
     }
 }

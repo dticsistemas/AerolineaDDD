@@ -22,10 +22,11 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.CrearFa
         private readonly IFacturaFactory _facturaFactory;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CrearFacturaHandler(IFacturaRepository facturaRepository,
+        public CrearFacturaHandler(IFacturaRepository facturaRepository, ILogger<CrearFacturaHandler> logger,
             IFacturaService facturaService, IFacturaFactory facturaFactory, IUnitOfWork unitOfWork)
         {
             _facturaRepository = facturaRepository;
+            _logger = logger;
             _facturaService = facturaService;
             _facturaFactory = facturaFactory;
             _unitOfWork = unitOfWork;
@@ -38,6 +39,7 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.CrearFa
                 Factura objFactura = _facturaFactory.Create(nroFactura);
 
                 objFactura.CrearFactura(request.Monto,request.Importe ,request.Lugar,request.NitBeneficiario,request.RazonSocialBeneficiario, request.ClienteId, request.VueloId, request.ReservaId);
+                objFactura.EntregaFactura();
                 await _facturaRepository.CreateAsync(objFactura);
                 await _unitOfWork.Commit();
                 return objFactura.Id;
