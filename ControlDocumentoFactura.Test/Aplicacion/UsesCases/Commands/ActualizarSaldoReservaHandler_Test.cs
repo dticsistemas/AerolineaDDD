@@ -1,6 +1,6 @@
 ﻿using Moq;
-using ControlDocumentoFactura.Dominio.Events.Reservas;
-using ControlDocumentoFactura.Dominio.Models.Reservas;
+using ControlDocumentoFactura.Dominio.Events.Facturas;
+using ControlDocumentoFactura.Dominio.Models.Facturas;
 using ControlDocumentoFactura.Dominio.Repositories.Reservas;
 using System;
 using System.Collections.Generic;

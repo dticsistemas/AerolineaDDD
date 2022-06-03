@@ -14,14 +14,13 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.CrearFa
         public String Lugar { get; set; }
         public String NitBeneficiario { get; set; }
         public String RazonSocialBeneficiario { get; set; }
-        public String NroAutorizacion { get; set; }
         public Guid ReservaId { get; set; }
         public Guid ClienteId { get; set; }
         public Guid VueloId { get; set; }
 
-       
 
 
+        private CrearFacturaCommand() { }
         public CrearFacturaCommand(decimal monto, decimal importe, string lugar,string nitBeneficiario,string razonSocialBeneficiario, Guid clienteId, Guid vueloId, Guid reservaId)
         {
             Monto = monto;

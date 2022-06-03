@@ -2,8 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ControlDocumentoFactura.Dominio.Models.Pagos;
-using ControlDocumentoFactura.Dominio.Models.Pagos.ValueObjetcs;
+using ControlDocumentoFactura.Dominio.Models.Facturas;
+using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
 using ControlDocumentoFactura.Dominio.Models.ValueObjects;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.ReadModel;
 using System;

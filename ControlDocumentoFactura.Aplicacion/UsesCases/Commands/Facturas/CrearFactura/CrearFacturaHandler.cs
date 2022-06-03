@@ -1,18 +1,16 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
 using ControlDocumentoFactura.Aplicacion.Services.Reservas;
-using ControlDocumentoFactura.Dominio.Events.Reservas;
-using ControlDocumentoFactura.Dominio.Factories.Pagos;
-using ControlDocumentoFactura.Dominio.Models.Pagos;
+using ControlDocumentoFactura.Dominio.Factories.Facturas;
+using ControlDocumentoFactura.Dominio.Models.Facturas;
 using ControlDocumentoFactura.Dominio.Repositories;
-using ControlDocumentoFactura.Dominio.Repositories.Pagos;
-using ControlDocumentoFactura.Dominio.Repositories.Reservas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using ControlDocumentoFactura.Dominio.Repositories.Facturas;
 
 namespace ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.CrearFactura
 {    
@@ -37,14 +35,9 @@ namespace ControlDocumentoFactura.Aplicacion.UsesCases.Commands.Facturas.CrearFa
             try
             {
                 string nroFactura = await _facturaService.GenerarNroFacturaAsync();
-
                 Factura objFactura = _facturaFactory.Create(nroFactura);
 
-
-
-                    objFactura.CrearFactura(request.Monto,request.Importe ,request.Lugar,request.NitBeneficiario,request.RazonSocialBeneficiario, request.ClienteId, request.VueloId, request.ReservaId);
-
-                await _facturaService.EnviarEmailFactura(objFactura);
+                objFactura.CrearFactura(request.Monto,request.Importe ,request.Lugar,request.NitBeneficiario,request.RazonSocialBeneficiario, request.ClienteId, request.VueloId, request.ReservaId);
                 await _facturaRepository.CreateAsync(objFactura);
                 await _unitOfWork.Commit();
                 return objFactura.Id;

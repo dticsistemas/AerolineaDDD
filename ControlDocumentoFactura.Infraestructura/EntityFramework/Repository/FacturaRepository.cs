@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ControlDocumentoFactura.Dominio.Models.Pagos;
-using ControlDocumentoFactura.Dominio.Repositories.Pagos;
+using ControlDocumentoFactura.Dominio.Models.Facturas;
+using ControlDocumentoFactura.Dominio.Repositories.Facturas;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts;
 using System;
 using System.Collections.Generic;

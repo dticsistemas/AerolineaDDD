@@ -22,7 +22,8 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             decimal deudaTest = new(720.0);
             DateTime fechaTest = DateTime.Now;
             var codReservaTest = "ABC12";
-            var estadoReservaTest = "R";
+            var estadoReservaTest = "P";
+            var tipoReservaTest = "R";
 
             var objReserva = new ReservaDto();
 
@@ -34,6 +35,7 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             Assert.Equal(DateTime.MinValue, objReserva.Fecha);
             Assert.Null(objReserva.CodReserva);
             Assert.Null(objReserva.EstadoReserva);
+            Assert.Null(objReserva.TipoReserva);
 
             objReserva.Id = idReservaTest;
             objReserva.ClienteId = idClienteTest;
@@ -43,6 +45,7 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             objReserva.Fecha = fechaTest;
             objReserva.CodReserva = codReservaTest;
             objReserva.EstadoReserva = estadoReservaTest;
+            objReserva.TipoReserva = tipoReservaTest;
 
             Assert.Equal(idReservaTest, objReserva.Id);
             Assert.Equal(idClienteTest, objReserva.ClienteId);
@@ -52,6 +55,7 @@ namespace ControlDocumentoFactura.Test.Aplicacion.Dtos
             Assert.Equal(fechaTest, objReserva.Fecha);
             Assert.Equal(codReservaTest, objReserva.CodReserva);
             Assert.Equal(estadoReservaTest, objReserva.EstadoReserva);
+            Assert.Equal(tipoReservaTest, objReserva.TipoReserva);
 
         }
     }

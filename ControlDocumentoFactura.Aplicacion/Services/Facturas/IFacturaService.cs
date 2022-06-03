@@ -1,4 +1,4 @@
-﻿using ControlDocumentoFactura.Dominio.Models.Pagos;
+﻿using ControlDocumentoFactura.Dominio.Models.Facturas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,5 @@ namespace ControlDocumentoFactura.Aplicacion.Services.Reservas
     {
         Task<string> GenerarNroFacturaAsync();
 
-        Task<string> EnviarEmailFactura(Factura factura);
     }
 }

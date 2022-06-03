@@ -1,4 +1,4 @@
-﻿using ControlDocumentoFactura.Dominio.Models.Pagos;
+﻿using ControlDocumentoFactura.Dominio.Models.Facturas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,21 +9,18 @@ namespace ControlDocumentoFactura.Aplicacion.Services.Reservas
 {
     public class FacturaService : IFacturaService
     {
-        public Task<string> EnviarEmailFactura(Factura factura)
-        {
-            return Task.FromResult("EMAIL RESERVA FACTURADA" + factura.getNroFactura());
-        }
+        
         public Task<string> GenerarNroFacturaAsync()
         {
-            return Task.FromResult(GeneradorCodigo(10));
-        }
-        public static string GeneradorCodigo(int length)
-        {
+            int length = 13;
             Random random = new Random();
             const string characters = "0123456789";
-            return new string(Enumerable.Repeat(characters, length)
+            var codigo= new string(Enumerable.Repeat(characters, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
+
+            return Task.FromResult(codigo);
         }
+        
 
     }
 }

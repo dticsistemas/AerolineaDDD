@@ -1,4 +1,4 @@
-﻿using ControlDocumentoFactura.Dominio.Events.Reservas;
+﻿using ControlDocumentoFactura.Dominio.Events.Facturas;
 using ControlDocumentoFactura.Dominio.Models.Reservas.ValueObjects;
 using ControlDocumentoFactura.Dominio.Models.ValueObjects;
 using ShareKernel.Cores;

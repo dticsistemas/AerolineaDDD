@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="EntityFramework\Migrations\**" />
+    <EmbeddedResource Remove="EntityFramework\Migrations\**" />
+    <None Remove="EntityFramework\Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ControlDocumentoFactura.Aplicacion\ControlDocumentoFactura.Aplicacion.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,5 @@
 ﻿using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
-using ControlDocumentoFactura.Dominio.Models.Pagos.ValueObjetcs;
+using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
 using ControlDocumentoFactura.Dominio.Models.ValueObjects;
 using ShareKernel.Cores;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Dominio.Models.Pagos
+namespace ControlDocumentoFactura.Dominio.Models.Facturas
 {
     public class Factura : AggregateRoot<Guid>
     {
@@ -30,7 +30,9 @@ namespace ControlDocumentoFactura.Dominio.Models.Pagos
 
         public Guid VueloId { get; private set; }
 
-        
+        public string  Estado { get; private set; }
+
+
 
 
         private Factura() { }
@@ -38,7 +40,7 @@ namespace ControlDocumentoFactura.Dominio.Models.Pagos
         {
             Id = Guid.NewGuid();
             Monto = new MontoValue(0m);
-            NroFactura = nroFactura;              
+            NroFactura = nroFactura;
 
         }
         public void CrearFactura(decimal monto, decimal importe, string lugar,string nitBeneficiario,string razonSocialBeneficiario, Guid clienteId, Guid vueloId, Guid reservaId)
@@ -55,6 +57,7 @@ namespace ControlDocumentoFactura.Dominio.Models.Pagos
             NitBeneficiario = nitBeneficiario;
             RazonSocialBeneficiario = razonSocialBeneficiario;
             NroAutorizacion = "1";
+            Estado = "P";
 
 
         }

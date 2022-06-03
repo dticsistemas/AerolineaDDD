@@ -1,21 +1,33 @@
-﻿using ShareKernel.Cores;
+﻿using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
+using ShareKernel.Cores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Dominio.Events.Reservas
+namespace ControlDocumentoFactura.Dominio.Events.Facturas
 {
      public record FacturaCreadoEvent : DomainEvent
     {
-        public Guid ReservaId { get; }
+        
         public decimal Monto { get; }
-        public FacturaCreadoEvent(Guid reservaId, decimal monto
+
+        public Guid FacturaId{ get; }
+        public Guid ClienteId { get; }
+
+        public Guid ReservaId { get; }
+
+        public RazonSocialValue razonSocialBeneficiario { get; }
+
+        public FacturaCreadoEvent(decimal monto, Guid facturaId, Guid clienteId, Guid reservaId
             ) : base(DateTime.Now)
         {
-            ReservaId = reservaId;
             Monto = monto;
+            FacturaId = facturaId;
+            ClienteId = clienteId;
+            ReservaId = reservaId;
+
 
         }
     }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ControlDocumentoFactura.Dominio.Events.Reservas;
 using ControlDocumentoFactura.Dominio.Models.Clientes;
-using ControlDocumentoFactura.Dominio.Models.Pagos;
+using ControlDocumentoFactura.Dominio.Models.Facturas;
 using ControlDocumentoFactura.Dominio.Models.Reservas;
 using ControlDocumentoFactura.Dominio.Models.Vuelos;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.Config.WriteConfig;
@@ -20,7 +19,7 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts
 
         public virtual DbSet<Vuelo> Vuelo { get; set; }
         public virtual DbSet<Reserva> Reserva { get; set; }
-        public virtual DbSet<Pago> Pago { get; set; }
+        
         public virtual DbSet<Factura> Factura { get; set; }
 
 
@@ -40,9 +39,6 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts
 
             var reservaConfig = new ReservaWriteConfig();
             modelBuilder.ApplyConfiguration<Reserva>(reservaConfig);
-
-            var pagoConfig = new PagoWriteConfig();
-            modelBuilder.ApplyConfiguration<Pago>(pagoConfig);
 
             var facturaConfig = new FacturaWriteConfig();
             modelBuilder.ApplyConfiguration<Factura>(facturaConfig);

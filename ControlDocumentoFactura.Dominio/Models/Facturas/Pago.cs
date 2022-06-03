@@ -1,5 +1,5 @@
-﻿using ControlDocumentoFactura.Dominio.Events.Reservas;
-using ControlDocumentoFactura.Dominio.Models.Pagos.ValueObjetcs;
+﻿using ControlDocumentoFactura.Dominio.Events.Facturas;
+using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
 using ControlDocumentoFactura.Dominio.Models.ValueObjects;
 using ShareKernel.Cores;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Dominio.Models.Pagos
+namespace ControlDocumentoFactura.Dominio.Models.Facturas
 {
     public class Pago : AggregateRoot<Guid>
     {
@@ -31,11 +31,7 @@ namespace ControlDocumentoFactura.Dominio.Models.Pagos
             ReservaId = reservaId;
             Fecha = DateTime.Now;            
 
-        }
-        public void ConsolidarPago()
-        {
-            AddDomainEvent(new FacturaCreadoEvent(ReservaId,Monto));
-        }
+        }        
 
     }
 }

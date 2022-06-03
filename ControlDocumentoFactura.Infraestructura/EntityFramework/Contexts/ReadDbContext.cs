@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ControlDocumentoFactura.Dominio.Events.Reservas;
+using ControlDocumentoFactura.Dominio.Events.Facturas;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.Config.ReadConfig;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.ReadModel;
 using ShareKernel.Cores;
@@ -16,7 +16,6 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts
         public virtual DbSet<ClienteReadModel> Cliente { set; get; }
         public virtual DbSet<VueloReadModel> Vuelo { set; get; }
         public virtual DbSet<ReservaReadModel> Reserva { set; get; }
-        public virtual DbSet<PagoReadModel> Pago { set; get; }
         public virtual DbSet<FacturaReadModel> Factura { set; get; }
 
 
@@ -40,8 +39,6 @@ namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts
             var facturaConfig = new FacturaReadConfig();
             modelBuilder.ApplyConfiguration<FacturaReadModel>(facturaConfig);
 
-            var pagoConfig = new PagoReadConfig();
-            modelBuilder.ApplyConfiguration<PagoReadModel>(pagoConfig);
 
             
             modelBuilder.Ignore<DomainEvent>();       

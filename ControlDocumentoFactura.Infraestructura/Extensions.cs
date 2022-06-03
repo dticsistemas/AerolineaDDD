@@ -15,7 +15,7 @@ using ControlDocumentoFactura.Aplicacion;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts;
 using Microsoft.EntityFrameworkCore;
 using ControlDocumentoFactura.Infraestructura.EntityFramework.Repository;
-using ControlDocumentoFactura.Dominio.Repositories.Pagos;
+using ControlDocumentoFactura.Dominio.Repositories.Facturas;
 using ControlDocumentoFactura.Dominio.Repositories.Vuelos;
 
 namespace ControlDocumentoFactura.Infraestructura
@@ -40,8 +40,7 @@ namespace ControlDocumentoFactura.Infraestructura
 
             services.AddScoped<IVueloRepository, VueloRepository>();
 
-            services.AddScoped<IPagoRepository, PagoRepository>();
-
+            
             services.AddScoped<IFacturaRepository, FacturaRepository>();
 
 

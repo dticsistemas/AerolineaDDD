@@ -1,5 +1,5 @@
 ﻿using Moq;
-using ControlDocumentoFactura.Dominio.Events.Reservas;
+using ControlDocumentoFactura.Dominio.Events.Facturas;
 using ControlDocumentoFactura.Dominio.Models.Vuelos;
 using ControlDocumentoFactura.Dominio.Repositories.Vuelos;
 using System;

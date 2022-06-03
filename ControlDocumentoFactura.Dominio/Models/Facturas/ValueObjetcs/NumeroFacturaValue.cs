@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Dominio.Models.Pagos.ValueObjetcs
+namespace ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs
 {
     public record NumeroFacturaValue : ValueObject
     {
