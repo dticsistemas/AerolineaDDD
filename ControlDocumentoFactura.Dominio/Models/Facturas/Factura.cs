@@ -1,6 +1,5 @@
 ﻿using ControlDocumentoFactura.Dominio.Events.Facturas;
 using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
-using ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs;
 using ControlDocumentoFactura.Dominio.Models.ValueObjects;
 using ShareKernel.Cores;
 using System;

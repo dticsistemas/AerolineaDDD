@@ -44,7 +44,7 @@ namespace ControlDocumentoFactura.Test.Aplicacion.UsesCases.Commands
             );
             var result = handler.Handle(objRequest, tcs.Token);
 
-            Assert.NotNull(_facturaTest.Id);
+            Assert.NotNull(_facturaTest);
         }
        
     }
