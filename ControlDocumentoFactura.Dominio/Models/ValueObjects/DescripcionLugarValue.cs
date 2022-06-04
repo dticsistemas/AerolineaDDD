@@ -14,10 +14,10 @@ namespace ControlDocumentoFactura.Dominio.Models.ValueObjects
 
         public DescripcionLugarValue(string name)
         {
-            CheckRule(new StringNotNullOrEmptyRule(name));
-            if (name.Length > 500)
+            CheckRule(new NotNullRule(name));
+            if (name.Length > 100)
             {
-                throw new BussinessRuleValidationException("DescripcionLugar can't be more than 500 characters");
+                throw new BussinessRuleValidationException("DescripcionLugar can't be more than 100 characters");
             }
             Value = name;
         }

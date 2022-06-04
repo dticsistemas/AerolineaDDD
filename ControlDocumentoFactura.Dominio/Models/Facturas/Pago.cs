@@ -24,13 +24,6 @@ namespace ControlDocumentoFactura.Dominio.Models.Facturas
             Monto = new MontoValue(0m);
             CodComprobante = codComprobante;
 
-        }
-        public void CrearPago(Guid reservaId, decimal monto)
-        {
-            Monto = monto;
-            ReservaId = reservaId;
-            Fecha = DateTime.Now;            
-
         }        
 
     }

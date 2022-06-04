@@ -15,9 +15,9 @@ namespace ControlDocumentoFactura.Dominio.Models.Facturas.ValueObjetcs
         public RazonSocialValue(string name)
         {
             CheckRule(new StringNotNullOrEmptyRule(name));
-            if (name.Length > 500)
+            if (name.Length > 120)
             {
-                throw new BussinessRuleValidationException("RazonSocial can't be more than 500 characters");
+                throw new BussinessRuleValidationException("RazonSocial can't be more than 120 characters");
             }
             Value = name;
         }

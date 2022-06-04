@@ -1,4 +1,5 @@
 ﻿using ControlDocumentoFactura.Dominio.Models.Clientes;
+using ShareKernel.Cores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,22 @@ namespace ControlDocumentoFactura.Test.Dominio.Models
             var objCliente = new Cliente(nombreCliente);
             Assert.NotEqual(Guid.Empty, objCliente.Id);
             Assert.Equal(nombreCliente,objCliente.NombreCompleto);
+
+            nombreCliente = "ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489";
+            nombreCliente += "ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489";
+            nombreCliente += "ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489";
+            nombreCliente += "ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489";
+            nombreCliente += "ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489ABCSDEFGHIJKLMNOPQRSTVUWXYZ01234567489";
+
+
+            Action testCodigoNombreExcedente500Caracteres = () => {
+                objCliente = new Cliente(nombreCliente);
+            };
+            var exception = Record.Exception(testCodigoNombreExcedente500Caracteres);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+
 
         }
         [Fact]

@@ -63,9 +63,7 @@ namespace ControlDocumentoFactura.Test.Dominio.Models
 
             objFactura.EntregaFactura();
             var domainEventList = (List<DomainEvent>)objFactura.DomainEvents;
-            //Assert.Single(domainEventList);
             Assert.IsType<FacturaCreadoEvent>(domainEventList[0]);
-            //--validar evento creado--
 
             objFactura.UpddateEstadoFacturaEntregado();
             Assert.Equal("E",objFactura.Estado);
@@ -89,6 +87,89 @@ namespace ControlDocumentoFactura.Test.Dominio.Models
             Assert.Null(factura.RazonSocialBeneficiario);
             Assert.Null(factura.RazonSocialProveedor);
             Assert.Equal(DateTime.MinValue, factura.Fecha);
+        }
+        [Fact]
+        public void Factura_CheckPropertiesFailValid()
+        {
+            decimal montoTest = new(40.0);
+            decimal importe = new(30.0);
+            string lugar = "SCZ";
+            string nitBeneficiario = "654321";
+            string razonSocialBeneficiario = "Juan Perez";
+            Guid clienteId = new();
+            Guid vueloId = new();
+            Guid reservaId = new();
+            string nroFacturaTest = "1234567890123";
+
+            Action testCodigoNroFacturaValido = () => { new Factura("1234567890123"); };
+
+            var exception = Record.Exception(testCodigoNroFacturaValido);
+            Assert.Null(exception);
+
+
+            Action testCodigoNroFacturaNulo = () => { new Factura(null); };
+
+            exception = Record.Exception(testCodigoNroFacturaNulo);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+
+            Action testCodigoNroFacturaVacio = () => { new Factura(""); };
+
+            exception = Record.Exception(testCodigoNroFacturaVacio);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+
+            var objFactura = new Factura(nroFacturaTest);
+
+            Action testCodigoLugarNull = () => {
+                objFactura.CrearFactura(montoTest, importe, null, nitBeneficiario, razonSocialBeneficiario, clienteId, vueloId, reservaId);
+
+            };
+            exception = Record.Exception(testCodigoLugarNull);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+            String lugarLong = "abcdefghijlmnopqrstuvwxyzabcdefghijklmnopqrdtvuwxyz012345678ABCDEFGHIJLMNOPQRSTVUWXYZ01234567890123567890123456789";
+            Action testCodigoLugarlargo = () => {
+                objFactura.CrearFactura(montoTest, importe, lugarLong, nitBeneficiario, razonSocialBeneficiario, clienteId, vueloId, reservaId);
+
+            };
+            exception = Record.Exception(testCodigoLugarlargo);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+
+            Action testCodigoMontoNegativo = () => {
+                objFactura.CrearFactura(new decimal(-15.0), importe, null, nitBeneficiario, razonSocialBeneficiario, clienteId, vueloId, reservaId);
+
+            };
+            exception = Record.Exception(testCodigoMontoNegativo);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+            Action testCodigoRazonSocialNull = () => {
+                objFactura.CrearFactura(montoTest, importe, lugar ,nitBeneficiario,null , clienteId, vueloId, reservaId);
+
+            };
+            exception = Record.Exception(testCodigoRazonSocialNull);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+            String razonSocialLong = "JUAN MARIANO CARLOS DE LAS FUENTE GERARDO JULIO SALVADOR MEDRANOL SUAEZ GALLARDO PEÑARRIETA SUBIRANA MEJIA CESAR PEREZ BORJA JIMENEZ CARRASCO ";
+            Action testCodigoRazonSocialLargo = () => {
+                objFactura.CrearFactura(montoTest, importe, lugar, nitBeneficiario, razonSocialLong, clienteId, vueloId, reservaId);
+
+            };
+            exception = Record.Exception(testCodigoRazonSocialLargo);
+            Assert.NotNull(exception);
+            Assert.IsType<BussinessRuleValidationException>(exception);
+
+
+
+
+
         }
     }
 }
