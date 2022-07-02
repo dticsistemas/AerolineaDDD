@@ -1,11 +1,8 @@
 services:
   db_mssql:
-    build: ./Db
-    hostname: db_mssql
+    build: ./Db   
     ports:
-      - 1433:1433  
-    volumes:
-        - ./apps/mssql/data:/var/lib/mssqlql/data         
+      - 1433:1433              
   ms_ctrlfactura:    
     build: .     
     ports:
