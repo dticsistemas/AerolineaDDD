@@ -1,0 +1,10 @@
+version: '1'
+services:
+  database_mssql:
+    build: ./Db
+    ports:
+      - 1433:1433
+  microservice_ctrlfactura:    
+    build: .     
+    ports:
+      - 80:80  
