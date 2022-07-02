@@ -1,12 +1,12 @@
-version: '1.1'
 services:
-  database_mssql:
+  db_mssql:
     build: ./Db
+    hostname: db_mssql
     ports:
-      - 1433:1433
+      - 1433:1433  
     volumes:
-        - ./apps/mssql/data:/var/lib/mssqlql/data    
-  microservice_ctrlfactura:    
+        - ./apps/mssql/data:/var/lib/mssqlql/data         
+  ms_ctrlfactura:    
     build: .     
     ports:
       - 80:80  

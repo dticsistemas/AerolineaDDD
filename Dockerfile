@@ -8,7 +8,7 @@ RUN dotnet publish "./ControlDocumentoFactura.WebApi/ControlDocumentoFactura.Web
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 
 
 EXPOSE 80
-#EXPOSE 443
+EXPOSE 443
 ENV ASPNETCORE_URLS=http://+:80
 ENV ASPNETCORE_ENVIRONMENT=Development
 
