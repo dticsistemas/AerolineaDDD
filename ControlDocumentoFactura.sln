@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43F68727-B540-4E2D-9A4F-D1143CAFEAD1}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Aplicacion", "ControlDocumentoFactura.Aplicacion\ControlDocumentoFactura.Aplicacion.csproj", "{5F22D415-D08C-484A-8737-9A4419BFAFAA}"
@@ -19,8 +20,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.WebApi", "ControlDocumentoFactura.WebApi\ControlDocumentoFactura.WebApi.csproj", "{F05EAAB3-1066-432E-8C45-BF0F824DF681}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Test", "ControlDocumentoFactura.Test\ControlDocumentoFactura.Test.csproj", "{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{B0D206DD-7FA0-4EE6-859B-D477657EC858}"
 	ProjectSection(SolutionItems) = preProject
@@ -66,10 +65,6 @@ Global
 		{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
