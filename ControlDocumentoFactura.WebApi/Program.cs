@@ -21,6 +21,7 @@ namespace ControlDocumentoFactura.WebApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    
                 });
     }
 }
