@@ -20,6 +20,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Test", "ControlDocumentoFactura.Test\ControlDocumentoFactura.Test.csproj", "{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{B0D206DD-7FA0-4EE6-859B-D477657EC858}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Db", "Db", "{6706A611-0D2E-4D7E-919F-5DAB37ABBCCB}"
+	ProjectSection(SolutionItems) = preProject
+		Db\create-database.sql = Db\create-database.sql
+		Db\Dockerfile = Db\Dockerfile
+		Db\entrypoint.sh = Db\entrypoint.sh
+		Db\run-initialization.sh = Db\run-initialization.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +66,10 @@ Global
 		{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE00CAA-9F87-46BC-A2A0-CE15566517E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1667D1DE-440A-4CDA-8E22-FF39FC2C2415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
