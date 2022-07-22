@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Aplicacion.Services.Reservas
-{
-    public interface IFacturaService
-    {
-        Task<string> GenerarNroFacturaAsync();
+namespace ControlDocumentoFactura.Aplicacion.Services.Reservas {
+	public interface IFacturaService {
+		Task<string> GenerarNroFacturaAsync();
 
-    }
+	}
 }

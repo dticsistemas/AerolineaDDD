@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShareKernel.Cores
-{
-    public interface IBussinessRule
-    {
-        bool IsValid();
+namespace ShareKernel.Cores {
+	public interface IBussinessRule {
+		bool IsValid();
 
-        string Message { get; }
-    }
+		string Message { get; }
+	}
 }

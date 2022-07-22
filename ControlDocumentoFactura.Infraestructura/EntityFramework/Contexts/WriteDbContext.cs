@@ -11,39 +11,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts
-{
-    public class WriteDbContext : DbContext
-    {
-        public virtual DbSet<Cliente> Cliente{ get; set; }
+namespace ControlDocumentoFactura.Infraestructura.EntityFramework.Contexts {
+	public class WriteDbContext:DbContext {
+		public virtual DbSet<Cliente> Cliente { get; set; }
 
-        public virtual DbSet<Vuelo> Vuelo { get; set; }
-        public virtual DbSet<Reserva> Reserva { get; set; }
-        
-        public virtual DbSet<Factura> Factura { get; set; }
+		public virtual DbSet<Vuelo> Vuelo { get; set; }
+		public virtual DbSet<Reserva> Reserva { get; set; }
+
+		public virtual DbSet<Factura> Factura { get; set; }
 
 
-        public WriteDbContext(DbContextOptions<WriteDbContext> options) : base(options)
-        {
-        }
+		public WriteDbContext(DbContextOptions<WriteDbContext> options) : base(options) {
+		}
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+		protected override void OnModelCreating(ModelBuilder modelBuilder) {
+			base.OnModelCreating(modelBuilder);
 
-            var clienteConfig = new ClienteWriteConfig();
-            modelBuilder.ApplyConfiguration<Cliente>(clienteConfig);
+			var clienteConfig = new ClienteWriteConfig();
+			modelBuilder.ApplyConfiguration<Cliente>(clienteConfig);
 
-            var vueloConfig = new VueloWriteConfig();
-            modelBuilder.ApplyConfiguration<Vuelo>(vueloConfig);
+			var vueloConfig = new VueloWriteConfig();
+			modelBuilder.ApplyConfiguration<Vuelo>(vueloConfig);
 
-            var reservaConfig = new ReservaWriteConfig();
-            modelBuilder.ApplyConfiguration<Reserva>(reservaConfig);
+			var reservaConfig = new ReservaWriteConfig();
+			modelBuilder.ApplyConfiguration<Reserva>(reservaConfig);
 
-            var facturaConfig = new FacturaWriteConfig();
-            modelBuilder.ApplyConfiguration<Factura>(facturaConfig);
+			var facturaConfig = new FacturaWriteConfig();
+			modelBuilder.ApplyConfiguration<Factura>(facturaConfig);
 
-            modelBuilder.Ignore<DomainEvent>();
-        }
-    }
+			modelBuilder.Ignore<DomainEvent>();
+		}
+	}
 }

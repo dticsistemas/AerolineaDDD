@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Test.Aplicacion
-{
-    internal class Extensions_Test
-    {
-    }
+namespace ControlDocumentoFactura.Test.Aplicacion {
+	internal class Extensions_Test {
+	}
 }
