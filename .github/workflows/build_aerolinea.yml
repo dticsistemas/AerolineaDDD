@@ -1,4 +1,4 @@
-name: .NET
+name: RELEASE_AEROLINEA
 
 on:
   push:
