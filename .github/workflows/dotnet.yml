@@ -1,10 +1,9 @@
 name: BUILD_AEROLINEA
 
-on:
-  push:
-    branches: [ "master" ]
+on:  
   pull_request:
-    branches: [ "master" ]
+    types: [ opened, reopened ]
+    branches: [ "develop" ]
 
 jobs:
   build:
