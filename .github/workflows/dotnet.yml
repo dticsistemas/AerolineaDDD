@@ -1,4 +1,4 @@
-name: .NET
+name: BUILD_AEROLINEA
 
 on:
   push:
