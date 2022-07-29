@@ -5,6 +5,13 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareKernel", "ShareKernel\ShareKernel.csproj", "{247642AC-782A-4F5B-8FFD-019BAAE3B825}"
 EndProject
+
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43F68727-B540-4E2D-9A4F-D1143CAFEAD1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		README.md = README.md
+	EndProjectSection
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Aplicacion", "ControlDocumentoFactura.Aplicacion\ControlDocumentoFactura.Aplicacion.csproj", "{5F22D415-D08C-484A-8737-9A4419BFAFAA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Dominio", "ControlDocumentoFactura.Dominio\ControlDocumentoFactura.Dominio.csproj", "{F0A84636-3546-4959-985E-5830B6738826}"
