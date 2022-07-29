@@ -44,5 +44,4 @@ jobs:
               IdentityFile ~/.ssh/staging.key
               StrictHostKeyChecking no
           END
-          mkdir -p /root/test_20202/
      
