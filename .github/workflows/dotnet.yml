@@ -1,5 +1,5 @@
 name: BUILD_AEROLINEA
-on:  
+on:   
   pull_request:
     types: [ opened, reopened ]
     branches: [ "develop" ]
