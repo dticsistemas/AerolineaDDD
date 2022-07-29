@@ -2,7 +2,7 @@ name: BUILD_AEROLINEA
 on:  
   pull_request:
     types: [ opened, reopened ]
-    branches: [ "develop" ]
+    branches: [ "develop" ] 
 
 
 jobs:
