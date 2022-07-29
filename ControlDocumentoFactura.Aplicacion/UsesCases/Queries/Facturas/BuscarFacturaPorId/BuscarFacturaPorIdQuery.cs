@@ -6,16 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlDocumentoFactura.Aplicacion.UsesCases.Queries.Pagos.BuscarFacturaPorId
-{
-    public class BuscarFacturaPorIdQuery : IRequest<FacturaDto>
-    {
-       public Guid Id { get; set; }
-        public BuscarFacturaPorIdQuery(Guid id)
-        {
-            Id = id;
-        }
-        public BuscarFacturaPorIdQuery() { }
+namespace ControlDocumentoFactura.Aplicacion.UsesCases.Queries.Pagos.BuscarFacturaPorId {
+	public class BuscarFacturaPorIdQuery:IRequest<FacturaDto> {
+		public Guid Id { get; set; }
+		public BuscarFacturaPorIdQuery(Guid id) {
+			Id = id;
+		}
+		public BuscarFacturaPorIdQuery() { }
 
-    }
+	}
 }

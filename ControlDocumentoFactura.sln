@@ -5,6 +5,7 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareKernel", "ShareKernel\ShareKernel.csproj", "{247642AC-782A-4F5B-8FFD-019BAAE3B825}"
 EndProject
+
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43F68727-B540-4E2D-9A4F-D1143CAFEAD1}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -23,6 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlDocumentoFactura.Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{B0D206DD-7FA0-4EE6-859B-D477657EC858}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
 	EndProjectSection
