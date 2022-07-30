@@ -44,12 +44,6 @@ jobs:
               IdentityFile ~/.ssh/staging.key
               StrictHostKeyChecking no
           END
-      - name: Stop the server
-        run: ssh staging 'sudo systemctl stop facturas.service'
-
       - name: Do deploy
         run: ssh staging 'cd /var/www/factura-app && bash deploydo.sh'
         
-      - name: Start the server
-        if: ${{ always() }}
-        run: ssh staging 'sudo systemctl start facturas.service'
