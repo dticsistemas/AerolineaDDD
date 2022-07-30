@@ -1,7 +1,7 @@
 name: BUILD_AEROLINEA
 on:   
   push:
-    branches: [ "develop" ]  
+    branches: [ "develop" ] 
   pull_request:
     types: [ opened, reopened ]
     branches: [ "develop" ]
