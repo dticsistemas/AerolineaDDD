@@ -50,7 +50,7 @@ jobs:
       - name: Do deploy
         run: ssh staging 'cd /var/www/factura-app && bash deploydo.sh'
         
-      - name: Start the server
+      - name: Start the server 
         if: ${{ always() }}
         run: ssh staging 'sudo systemctl start factura.service'
         
