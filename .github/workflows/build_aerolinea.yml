@@ -2,6 +2,8 @@ name: DEPLOY_AEROLINEA
 
 on:
   push:
+  
+  
     branches: [ "master" ]  
 
 jobs:
